@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "658266423655",
+    "project_id": "flash-chat-346b0",
+    "storage_bucket": "flash-chat-346b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658266423655:android:24525e38786b9539732fc2",
+        "android_client_info": {
+          "package_name": "com.taimoor.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658266423655-u9bp6rv5cvl2fbvakhcbk9ueg9e1noa8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVBq94Rg1EyDT3YV2w6fKRn2lGVQlzVyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658266423655-u9bp6rv5cvl2fbvakhcbk9ueg9e1noa8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
