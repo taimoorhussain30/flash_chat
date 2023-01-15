@@ -6,7 +6,7 @@ import 'chat_screen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class RegistrationScreen extends StatefulWidget {
-  static String id = 'registration_screen';
+  static String id = '/registration_screen';
   const RegistrationScreen({super.key});
 
   @override
@@ -46,15 +46,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 },
                 decoration:
                     kTextFieldDecoration.copyWith(hintText: 'Enter your email'),
-              ),
-              TextField(
-                keyboardType: TextInputType.name,
-                textAlign: TextAlign.center,
-                onChanged: (value) {
-                  name = value;
-                },
-                decoration:
-                    kTextFieldDecoration.copyWith(hintText: 'Enter your name'),
               ),
               const SizedBox(
                 height: 8.0,

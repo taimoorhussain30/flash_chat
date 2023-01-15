@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class LoginScreen extends StatefulWidget {
-  static String id = 'login_screen';
+  static String id = '/login_screen';
   const LoginScreen({super.key});
 
   @override
@@ -61,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 title: 'Log In',
                 color: Colors.lightBlue,
                 onPress: () async {
-                  final navigator = Navigator.pushNamed(context, ChatScreen.id);
+                  final navigator = Navigator.of(context);
                   setState(() {
                     showSpinner = true;
                   });
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     email: email.toString(),
                     password: password.toString(),
                   );
-                  navigator;
+                  navigator.pushNamed(ChatScreen.id);
                   setState(() {
                     showSpinner = false;
                   });

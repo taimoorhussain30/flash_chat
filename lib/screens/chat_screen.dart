@@ -7,7 +7,7 @@ FirebaseFirestore firestore = FirebaseFirestore.instance;
 FirebaseAuth? loggedInUser;
 
 class ChatScreen extends StatefulWidget {
-  static String id = 'chat_screen';
+  static String id = '/chat_screen';
   const ChatScreen({super.key});
 
   @override
@@ -42,7 +42,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    CollectionReference message = FirebaseFirestore.instance.collection('');
+    CollectionReference message =
+        FirebaseFirestore.instance.collection('messages');
     Future<void> add() {
       // Call the user's CollectionReference to add a new user
       return message.add({
@@ -121,11 +122,11 @@ class MessagesStream extends StatelessWidget {
             ),
           );
         }
-        final messages = snapshot.data!.docs.reversed;
+        final messages = snapshot.data?.docs.reversed ?? [];
         List<MessageBubble> messageBubbles = [];
         for (var message in messages) {
-          final messageText = (message.data() as dynamic)['text'];
-          final messageSender = (message.data() as dynamic)['sender'];
+          final messageText = (message.data() as Map)['text'];
+          final messageSender = (message.data() as Map)['sender'];
           final currentUser = loggedInUser;
           final messageBubble = MessageBubble(
               text: messageText,

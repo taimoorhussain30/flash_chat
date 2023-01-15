@@ -5,7 +5,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  static String id = 'welcome_screen';
+  static String id = '/welcome_screen';
   const WelcomeScreen({super.key});
 
   @override
@@ -72,7 +72,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               title: 'Log In',
               color: Colors.lightBlue,
               onPress: () {
-                Navigator.pushNamed(context, LoginScreen.id);
+                Navigator.of(context).pushNamed(LoginScreen.id);
               },
             ),
             RoundedButton(
